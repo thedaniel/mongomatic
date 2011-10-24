@@ -205,7 +205,7 @@ Mongomatic doesn't have any kind of special support for relationship management 
 
 Mongomatic does have one thing in common with ActiveRecord and that is observers. You can add observers to your class to decouple distinct functionality in callbacks. To add observation to your model you must include the Mongomatic::Observable module. All observers inherit from Mongomatic::Observer. 
 
-Unlike ActiveRecord the existence of a CollectionNameObserver will automatically add the observer the CollectionName class. Instead you must use the observer macro or CollectionName.add_observer
+Unlike ActiveRecord the existence of a CollectionNameObserver will not automatically add the observer to the CollectionName class. Instead you must use the observer macro or CollectionName.add_observer
 
 You can add your own observers to CollectionName using CollectionName.add_observer(klass).
 
